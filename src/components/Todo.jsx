@@ -1,9 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const Todo = ({ id, title, handleCheck, isCompleted, setCurrentDetailing }) => {
-	const [show, setShow] = useState(false)
-
+const Todo = ({ id, title, handleCheck, isCompleted }) => {
 	return (
 		<>
 			<tr>
@@ -18,10 +16,11 @@ const Todo = ({ id, title, handleCheck, isCompleted, setCurrentDetailing }) => {
 					/>
 				</td>
 				<td>
-                    <i
-                        className="bi bi-info-square m-0"
-                        onClick={() => setCurrentDetailing(id)}
-                    ></i>
+                    <Link to={`/task/${id}`}>
+                        <i
+                            className="bi bi-info-square m-0"
+                        ></i>
+                    </Link>
 				</td>
 			</tr>
 		</>
