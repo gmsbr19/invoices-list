@@ -1,0 +1,9 @@
+.bi-info-square:hover{
+  cursor: pointer;
+  color: #0d6efd;
+}
+
+.bi-search{
+  width: 24px;
+  height: 24px;
+}
